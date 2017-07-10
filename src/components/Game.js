@@ -65,7 +65,7 @@ export default class Game extends React.Component {
     const moves = history.map((step, move) => {
       const desc = move ? 'Move #' + move : 'Game start';
       return (
-        <li key={move}>
+        <li key={move} style={{fontWeight: (this.state.stepNumber == move) ? 'bold' : 'normal' }}>
           <a href="#" onClick={() => this.jumpTo(move)}>{desc}</a>
         </li>
       );
